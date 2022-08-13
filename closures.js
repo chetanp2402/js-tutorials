@@ -15,14 +15,9 @@ function f(){
 f();
 
 // another closure example
-// simple closure example
 function j(){
     var z = 28;
   
-    
-    // Closure is function bundled together 
-    // with its lexical environment
-    // e forms closure with f
     function k (){
         console.log(z);
     }
@@ -30,6 +25,12 @@ function j(){
     return k;
 }
 
+// function j will be executed and popped from stack after this line
 var l = j();
 
-console.log(l);
+
+// still the value of a will be printed even when it is executed in diff execution context
+// Function can now be executed independently of parent function and
+// it still remembers the variables from parent function
+
+l();
