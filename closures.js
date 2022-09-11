@@ -21,7 +21,8 @@ function j(){
     function k (){
         console.log(z);
     }
-
+    // if z is reassgned 100 then it will get printed
+    //z= 100;
     return k;
 }
 
